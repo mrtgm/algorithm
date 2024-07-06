@@ -7,10 +7,21 @@ fn test<T: Copy + Debug + Ord>(arr: &mut [T]) {}
 mod test {
     use super::*;
 
+    struct Point {
+        x: i32,
+        y: i32,
+    }
+
     #[test]
     fn test_test() {
-        let mut arr = [5, 2, 4, 6, 1, 3];
-        test(&mut arr);
-        assert_eq!(arr, [1, 2, 3, 4, 5, 6]);
+        let mut a = Point { x: 100, y: 200 };
+
+        {
+            let b = &mut a;
+
+            // a.y;
+
+            b;
+        }
     }
 }
