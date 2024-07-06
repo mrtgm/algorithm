@@ -1,0 +1,7 @@
+{
+  "template-script-setup": {
+    "prefix": "template",
+    "body": ["use std::fmt::Debug;", "", "fn $1 (){", "", "}", "", "#[cfg(test)]", "mod test {", "    use super::*;", "    #[test]", "    fn test_$1() {", "", "   }", "}", ""],
+    "description": ""
+  }
+}

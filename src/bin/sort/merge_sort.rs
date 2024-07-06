@@ -60,6 +60,7 @@ fn merge_sort<T: Ord + Copy + Debug>(arr: &mut [T]) {
     while left_index < left.len() {
         arr[arr_index] = left[left_index];
         left_index += 1;
+
         arr_index += 1;
     }
 
