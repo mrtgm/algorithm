@@ -57,7 +57,6 @@ fn dfs(g: &Graph, h: usize, w: usize, seen: &mut Vec<Vec<bool>>) {
         if seen[nh as usize][nw as usize] {
             continue;
         }
-
         dfs(g, nh as usize, nw as usize, seen);
     }
 }
