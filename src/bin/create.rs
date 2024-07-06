@@ -63,22 +63,21 @@ fn main() {{}}
                 let mut category_file = OpenOptions::new()
                     .read(true)
                     .write(true)
-                    .open(&category_file_path)?;
+                    .open(&category_file_path)?; // OpenOptions で両方可能
+
                 let reader = BufReader::new(&category_file);
                 let mut v: Vec<String> = reader.lines().flat_map(|v| v).collect(); // Iter<Result<T>> を flat_map と collect で vec に
 
-                category_file.rewind().unwrap();
+                category_file.rewind().unwrap(); //読んだ後はポインタを巻き戻し
 
                 if let Some(target_line) = v.iter().enumerate().find(|(_, line)| "}" == *line) {
                     let (i, _) = target_line;
-                    v.insert(
-                        i - 1,
-                        format!("    pub(super) mod {};", args.file).to_string(),
-                    );
+                    v.insert(i, format!("    pub(super) mod {};", args.file).to_string());
                     for l in v {
-                        category_file
-                            .write((l + "\n").as_bytes())
-                            .with_context(|| "write fail")?;
+                        writeln!(category_file, "{}", l).with_context(|| "write fail")?;
+                        // category_file
+                        //     .write((l + "\n").as_bytes())
+                        //     .with_context(|| "write fail")?;
                     }
                 } else {
                     return Err(anyhow::anyhow!("}} not found"));
@@ -92,11 +91,11 @@ fn main() {{}}
             file.write_all(template.as_bytes())?;
         }
     } else {
-        env::set_current_dir("./src/bin").unwrap();
-        std::fs::create_dir(&args.category).unwrap();
+        env::set_current_dir("./src/bin")?;
+        std::fs::create_dir(&args.category)?;
 
-        let mut file = File::create(file_path).unwrap();
-        file.write_all(template.as_bytes()).unwrap();
+        let mut file = File::create(file_path)?;
+        file.write_all(template.as_bytes())?;
     }
 
     Ok(())

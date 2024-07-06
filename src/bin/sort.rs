@@ -17,6 +17,7 @@ mod sort {
     pub(super) mod selection_sort_3;
     pub(super) mod bubble_sort_4;
     pub(super) mod selection_sort_rev;
+    pub(super) mod merge_sort4;
 }
 
 fn main() {
