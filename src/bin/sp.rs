@@ -9,5 +9,8 @@ mod sp {
     pub(super) mod p82_stack;
     pub(super) mod p87_queue;
     pub(super) mod p95_doubly;
+    pub(super) mod p95_doubly_2;
+    pub(super) mod p119_linear_search;
+    pub(super) mod p122_binary;
 }
 fn main() {}
