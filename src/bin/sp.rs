@@ -15,5 +15,8 @@ mod sp {
     pub(super) mod p142_all_search;
     pub(super) mod p147_koch;
     pub(super) mod p152_merge;
+    pub(super) mod p158_partition;
+    pub(super) mod p163_quick;
+    pub(super) mod p168_computing_sort;
 }
 fn main() {}
