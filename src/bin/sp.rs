@@ -12,5 +12,8 @@ mod sp {
     pub(super) mod p95_doubly_2;
     pub(super) mod p119_linear_search;
     pub(super) mod p122_binary;
+    pub(super) mod p142_all_search;
+    pub(super) mod p147_koch;
+    pub(super) mod p152_merge;
 }
 fn main() {}
