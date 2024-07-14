@@ -18,5 +18,8 @@ mod sp {
     pub(super) mod p158_partition;
     pub(super) mod p163_quick;
     pub(super) mod p168_computing_sort;
+    pub(super) mod p176_revese;
+    pub(super) mod p182_min_cost_sort;
+    pub(super) mod p185_tree;
 }
 fn main() {}
