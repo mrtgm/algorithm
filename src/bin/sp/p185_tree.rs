@@ -1,10 +1,10 @@
 // Path: src/bin/sp/p185_tree.rs
 use std::fmt::Debug;
 
-// 左子右兄弟表現
+// 左子・右兄弟表現
 #[derive(Debug, Clone)]
 struct Node<T: Clone> {
-    parent: T,
+    parent: T,        //親、根の場合は -1
     left: Option<T>,  // もっとも左の子
     right: Option<T>, // すぐ右の兄弟
 }

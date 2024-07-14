@@ -21,5 +21,7 @@ mod sp {
     pub(super) mod p176_revese;
     pub(super) mod p182_min_cost_sort;
     pub(super) mod p185_tree;
+    pub(super) mod p195_binary_tree;
+    pub(super) mod p208_binary_search;
 }
 fn main() {}
