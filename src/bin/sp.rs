@@ -23,5 +23,8 @@ mod sp {
     pub(super) mod p185_tree;
     pub(super) mod p195_binary_tree;
     pub(super) mod p208_binary_search;
+    pub(super) mod p231_heap;
+    pub(super) mod p236_max_heap;
+    pub(super) mod p240_p_queue;
 }
 fn main() {}
