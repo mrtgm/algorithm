@@ -1,6 +1,8 @@
 // Path: src/bin/sp/p142_all_search.rs
 use std::fmt::Debug;
 
+// O(2^n) 添字 i を描画->埋める->描画->外す を配列の各要素に対し再帰的に繰り替す
+// 二回再帰すると、次数が2の再帰木ができる
 fn rec(i: usize, result: &mut [usize]) {
     if i == result.len() {
         println!("{:?}", result);
