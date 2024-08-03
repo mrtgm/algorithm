@@ -20,6 +20,9 @@ mod sp {
     pub(super) mod p269_graph;
     pub(super) mod p273_dfs;
     pub(super) mod p287;
+    pub(super) mod p294_prim;
+    pub(super) mod p304_dijkstra;
+    pub(super) mod p322_disjoint_set;
     pub(super) mod p48;
     pub(super) mod p48_2;
     pub(super) mod p55_insertion;
@@ -31,6 +34,11 @@ mod sp {
     pub(super) mod p87_queue;
     pub(super) mod p95_doubly;
     pub(super) mod p95_doubly_2;
-    pub(super) mod p294;
+    pub(super) mod p324_range_search;
+    pub(super) mod p336_all_pairs_shortest_path;
+    pub(super) mod p342_topo_sort;
+    pub(super) mod p348_articulation_point;
+    pub(super) mod p353_diameter;
+    pub(super) mod rev_selection;
 }
 fn main() {}
