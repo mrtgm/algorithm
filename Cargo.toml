@@ -8,4 +8,5 @@ edition = "2021"
 [dependencies]
 anyhow = "1.0.86"
 clap = { version = "4.5.8", features = ["derive"] }
+proconio = "0.5.0"
 strum = { version = "0.26.3", features = ["derive"] }
