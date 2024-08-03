@@ -52,7 +52,6 @@ mod test {{
             format!(
                 r#"use std::fmt::Debug;
 
-#[macro_export]
 macro_rules! input {{
     (source = $s:expr, $($r:tt)*) => {{
         let mut iter = $s.split_whitespace();
@@ -74,16 +73,15 @@ macro_rules! input {{
             }};
             }}
 
-#[macro_export]
 macro_rules! input_inner {{
     ($next:expr) => {{}};
     ($next:expr, ) => {{}};
     ($next:expr, $var:ident : $t:tt $($r:tt)*) => {{
+        let $var = read_value!($next, $t);
         input_inner!{{$next $($r)*}}
             }};
             }}
 
-#[macro_export]
 macro_rules! read_value {{
     ($next:expr, ( $($t:tt),* )) => {{
         ( $(read_value!($next, $t)),* )
