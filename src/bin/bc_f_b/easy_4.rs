@@ -6,16 +6,15 @@ use num_traits::pow;
 use proconio::{
     input,
     marker::{Chars, Usize1},
-            };
+};
 #[allow(unused_imports)]
 use std::cmp::{max, min};
 #[allow(unused_imports)]
 use std::collections::{HashMap, HashSet, VecDeque};
 
 fn main() {
-    input! {
-            }
-            }
+    input! {}
+}
 
 #[cfg(test)]
 mod test {
@@ -24,5 +23,5 @@ mod test {
     #[test]
     fn easy_4() {
         main();
-            }
-            } 
+    }
+}

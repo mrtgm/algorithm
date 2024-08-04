@@ -13,7 +13,12 @@ use std::cmp::{max, min};
 use std::collections::{HashMap, HashSet, VecDeque};
 
 fn main() {
-    input! {}
+    input! {
+        a: u32,
+        b: u32,
+    }
+
+    println!("{}", (a + b - 3) / (a - 1));
 }
 
 #[cfg(test)]
@@ -22,6 +27,8 @@ mod test {
 
     #[test]
     fn easy_1() {
-        main();
+        loop {
+            main();
+        }
     }
 }
