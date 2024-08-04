@@ -13,7 +13,16 @@ use std::cmp::{max, min};
 use std::collections::{HashMap, HashSet, VecDeque};
 
 fn main() {
-    input! {}
+    input! {
+        n: f32,
+    }
+
+    let a = n / 1.08;
+    if (a.ceil() * 1.08).floor() == n {
+        println!("{}", a.ceil());
+    } else {
+        println!(":(");
+    }
 }
 
 #[cfg(test)]
