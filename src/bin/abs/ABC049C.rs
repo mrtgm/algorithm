@@ -30,11 +30,27 @@ fn main() {
     }
 
     let targets = ["dream", "dreamer", "erase", "eraser"];
-    let mut ans = false;
+    let mut dp = vec![false; s.len() + 1];
 
-    check(&s, &mut ans, &targets);
+    // check(&s, &mut ans, &targets);
 
-    if ans {
+    dp[0] = true;
+
+    for index in 0..s.len() {
+        if !dp[index] {
+            continue;
+        }
+        for target in targets {
+            let len = index + target.len();
+            if s.len() >= len && &s[index..len] == target {
+                dp[len] = true;
+            }
+        }
+    }
+
+    println!("{:?}", dp);
+
+    if *dp.last().unwrap() {
         println!("YES")
     } else {
         println!("NO")

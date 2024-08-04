@@ -55,16 +55,22 @@ macro_rules! read_value {
 fn main() {
     input! {
         n: u32,
-        a: [u32;n]
+        a: [i32;n]
     }
 
     let mut array = a;
-    let mut count: u8 = 0;
+    // let mut count: u8 = 0;
 
-    while array.iter().all(|x| x % 2 == 0) {
-        count += 1;
-        array = array.iter().map(|x| x / 2).collect();
-    }
+    // while array.iter().all(|x| x % 2 == 0) {
+    //     count += 1;
+    //     array = array.iter().map(|x| x / 2).collect();
+    // }
+
+    let count = array
+        .into_iter()
+        .map(|v| format!("{:b}", v & -v).to_string().len() - 1)
+        .min()
+        .unwrap();
 
     println!("{}", count)
 }
