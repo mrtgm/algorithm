@@ -6,7 +6,7 @@ use num_traits::pow;
 use proconio::{
     input,
     marker::{Chars, Usize1},
-            };
+};
 #[allow(unused_imports)]
 use std::cmp::{max, min};
 #[allow(unused_imports)]
@@ -14,8 +14,16 @@ use std::collections::{HashMap, HashSet, VecDeque};
 
 fn main() {
     input! {
-            }
-            }
+        n: i32
+    }
+
+    let ans = (1..=n)
+        .map(|v| format!("{:b}", v & -v)[1..].len() as u32)
+        .max()
+        .unwrap();
+
+    println!("{}", 2_i32.pow(ans));
+}
 
 #[cfg(test)]
 mod test {
@@ -24,5 +32,5 @@ mod test {
     #[test]
     fn easy_11() {
         main();
-            }
-            } 
+    }
+}
