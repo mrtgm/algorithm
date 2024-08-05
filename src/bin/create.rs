@@ -63,6 +63,8 @@ use proconio::{{
 use std::cmp::{{max, min}};
 #[allow(unused_imports)]
 use std::collections::{{HashMap, HashSet, VecDeque}};
+#[allow(unused_imports)]
+use superslice::Ext;
 
 fn main() {{
     input! {{

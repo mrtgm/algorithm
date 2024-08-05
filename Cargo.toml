@@ -12,3 +12,4 @@ itertools = "0.13.0"
 num-traits = "0.2.19"
 proconio = "0.5.0"
 strum = { version = "0.26.3", features = ["derive"] }
+superslice = "1.0.0"
