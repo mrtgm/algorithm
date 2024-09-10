@@ -13,11 +13,11 @@ fn quick_sort<T: Copy + Debug + Ord>(arr: &mut [T]) {
     let mut right = arr.len() - 1;
 
     while left <= right {
-        // pivot より大きい値を左から探す
+        // pivot 以上の値を左から探す
         while arr[left] < pivot_value {
             left += 1;
         }
-        // pivot より小さい値を右から探す
+        // pivot 以下の値を右から探す
         while arr[right] > pivot_value {
             right -= 1;
         }
@@ -45,8 +45,8 @@ mod test {
 
     #[test]
     fn test_quick_sort() {
-        let mut arr = [7, 8, 1, 3, 2, 4, 6, 5];
+        let mut arr = [5, 4, 7, 3, 6];
         quick_sort(&mut arr);
-        assert_eq!(arr, [1, 2, 3, 4, 5, 6, 7, 8]);
+        assert_eq!(arr, [3, 4, 5, 6, 7]);
     }
 }
